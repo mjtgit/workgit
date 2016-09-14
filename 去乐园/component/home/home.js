@@ -18,7 +18,7 @@ define([],function(){
 			for (var i = 0; i < obj.slider.length; i++) {
 				var imgobj = $('<div class="swiper-slide"><img src="'+ obj.slider[i].img+'"/></div>')
 				$('.swiper-wrapper').append(imgobj)
-				console.log(obj.slider[i].img)
+				// console.log(obj.slider[i].img)
 			}
 		  	var mySwiper = new Swiper ('.swiper-container', {
 			    // direction: 'vertical',

@@ -31,4 +31,8 @@ require(['jquery','underscore','router'],function(){
 	//监听地址栏的变化（也可以写在router.js中，当写在router.js中时，
 	//函数要传参，监听要写成： 参数.history.start();）
 	Backbone.history.start();
+	$('.footer a').on('click',function(){
+		$('.footer a').css('color','#838383');
+		$(this).css('color','red');
+	})
 })
