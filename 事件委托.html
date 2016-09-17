@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ajaxTest</title>
+	<meta charset = "utf-8">
+</head>
+<body>
+	<div id = "divId">
+		<input type = "button" value = "btn1" id = "btn1"/>
+		<input type = "button" value = "btn2" id = "btn2"/>
+		<input type = "button" value = "btn3" id = "btn3"/>
+		<input type = "button" value = "btn4" id = "btn4"/>
+		<input type = "button" value = "btn5" id = "btn5"/>
+		<input type = "button" value = "btn6" id = "btn6"/>
+		<input type = "button" value = "btn7" id = "btn7"/>
+	</div>
+</body>
+<script type="text/javascript">
+	//事件委托
+	//传统事件绑定方式
+	//ie下使用window.event取得事件对象，其他浏览器使用事件内部参数取得事件对象
+
+	// document.getElementById("btn1").onclick = function(e){
+	// 	e = e || window.event;
+	// 	console.log(this);
+	// };
+	// document.getElementById("btn2").onclick = function(e){
+	// 	e = e || window.event;
+	// 	console.log(this);
+	// };
+	// document.getElementById("btn3").onclick = function(e){
+	// 	e = e || window.event;
+	// 	console.log(this);
+	// };
+	// document.getElementById("btn4").onclick = function(e){
+	// 	e = e || window.event;
+	// 	console.log(this);
+	// };
+	// document.getElementById("btn5").onclick = function(e){
+	// 	e = e || window.event;
+	// 	console.log(this);
+	// };
+
+	//使用for循环批量绑定事件
+	// for(var i = 1;i<=5;i++){
+	// 	document.getElementById("btn"+i).onclick = function(e){
+	// 		e = e || window.event;
+	// 		console.log(this);
+	// 	};
+	// }
+
+	//尝试第一个事件委托
+
+	//事件委托优势：1、减少页面绑定事件数/ 2、可以处理下级元素动态变化的场景,通过上层事件监听，处理下级元素事件。
+	//事件委托基于事件冒泡特性，和event能够准确取得事件触发对象两种特性实现。
+	document.getElementById("divId").onclick = function(e){
+		e = e || window.event;
+		// console.log(e.target.id);
+		switch(e.target.id){
+			case "btn1":
+				console.log(e.target.value);
+				break;
+			case "btn2":
+				console.log(e.target.value);
+				break;
+			case "btn3":
+				console.log(e.target.value);
+				break;
+			case "btn4":
+				console.log(e.target.value);
+				break;
+			case "btn5":
+				console.log(e.target.value);
+				break;
+			case "btn6":
+				console.log(e.target.value);
+				break;
+			case "btn7":
+				console.log(e.target.value);
+				break;
+			default:
+				console.log("未知元素");
+		}
+	};
+	var fn =  (function(){
+		var conf = {
+			name: "tom"
+		};
+
+		return function(){
+			return conf;
+		}
+	})();
+</script>
+</html>
