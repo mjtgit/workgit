@@ -16,18 +16,20 @@ define([],function(){
 			})
 		},
 		leIDfunc : function(){
-			require(['text!component/leID/leID.html'],function(content){
-				$('#content').html(content)
+			require(['./component/leyuan/leyuan.js'],function(res){
+				res.add();
+				res.ajax();
+				res.gn();
 			})
 		},
 		leyuanfunc : function(){
-			require(['text!component/leyuan/leyuan.html'],function(content){
-				$('#content').html(content)
+			require(['./component/leID/leID.js'],function(res){
+				res.add();
 			})
 		},
 		userfunc : function(){
-			require(['text!component/user/user.html'],function(content){
-				$('#content').html(content)
+			require(['component/user/user.js'],function(res){
+				res.add()
 			})
 		}
 	});
