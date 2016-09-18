@@ -1,0 +1,19 @@
+
+
+.home_box{width: 100%;height: 100%;overflow: auto;}
+.swiper-container {width: 100%;height: 9rem;} 
+.swiper-wrapper{width: 100%;height: 100%;};
+.swiper-slide{width: 100%;height: 100%;}
+.swiper-slide img{width: 100%;height: 100%;}
+.home_banner{width: 100%;height: 7rem;display: flex;justify-content: space-between;margin:0.8rem 0 0.6rem 0;}
+.home_banner a{display: inline-block;width: 49%;height: 100%;}
+.home_banner a img{width: 100%;height: 100%;}
+
+.home_jctj{width: 100%;height: 2rem;line-height: 2rem;display: flex;justify-content: center;margin-bottom: 0.6rem}
+.home_jctj p{border-top: 0.1rem solid #f06d5b;border-bottom: 0.1rem solid #f06d5b;color: #ffa9b2;}
+
+.home_imgslist{width: 100%;}
+.home_imgslist li{width: 100%;height: 6rem;margin-bottom: 0.3rem}
+.home_imgslist li img{width: 100%;height: 100%;}
+
+
