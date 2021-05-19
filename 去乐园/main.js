@@ -5,7 +5,6 @@ window.onresize = function(){
 }
 
 
-
 require.config({
   paths:{
     jquery:'js/jquery-1.12.3',
